@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-amber: #D4AF37;
+  --color-cream: #FFFDF0;
+  --color-coffee: #3E2723;
+  --font-sans: "Inter", "Noto Sans TC", system-ui, sans-serif;
+  --font-serif: "Playfair Display", "Noto Serif TC", ui-serif, serif;
+}
+
+body {
+  @apply bg-cream text-coffee font-serif;
+  background-color: var(--color-cream);
+  color: var(--color-coffee);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.bento-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-3 lg:gap-4;
+}
+
+.bento-card {
+  @apply bg-white border border-amber/30 rounded-[16px] p-6 shadow-[0_4px_15px_rgba(62,39,35,0.05)] overflow-hidden flex flex-col relative transition-all duration-300;
+}
+
+.bento-card-dark {
+  @apply bg-stone-900 border-none text-white;
+}
+
+.bento-accent-border {
+  @apply border-l-4 border-l-amber;
+}
+
+.timeline-item {
+  @apply flex items-center gap-2 py-2 border-b border-gray-100 text-sm;
+}
+
+.stat-circle {
+  @apply w-12 h-12 rounded-full border-2 border-amber bg-amber/10 flex items-center justify-center text-coffee font-bold text-lg;
+}
+
+/* Base custom utilities */
+.glass-panel {
+  @apply bg-white border border-amber/30 rounded-[16px] p-6 shadow-[0_4px_15px_rgba(62,39,35,0.05)];
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-amber to-yellow-600;
+}
